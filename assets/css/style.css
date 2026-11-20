@@ -1,34 +1,48 @@
-/* SportsHub — Week Project Settimana VII
-   Reset minimale + tipografia di base. Aggiungi qui le tue regole. */
-
-
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #1a1a1a;
-  background: #f4f6fa;
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #1a3366;
+  --bs-primary-rgb: 26, 51, 102;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
+body.dark {
+  --bs-primary: #5c85d6;
+  --bs-primary-rgb: 92, 133, 214;
 }
 
-.site-header {
-  background-color: hsl(220, 60%, 25%);
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.scheda-squadra {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.scheda-squadra:hover {
+  transform: translateY(-2px);
+}
+
+[data-bs-toggle="modal"] {
+  cursor: pointer;
+}
+
+header,
+header h1 {
+  transition: all 0.3s ease;
 }
 
 
-/* Aggiungi qui le tue regole per: form, risultati, card squadra, eventi. */
+header.scrolled p {
+  max-height: 0;
+  opacity: 0;
+  margin: 0 !important;
+}
 
-.ricerca {
-  max-width: 540px;
+header.scrolled h1 {
+  font-size: 1.8rem;
 }
