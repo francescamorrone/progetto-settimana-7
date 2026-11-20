@@ -28,3 +28,7 @@ body {
 
 
 /* Aggiungi qui le tue regole per: form, risultati, card squadra, eventi. */
+
+.ricerca {
+  max-width: 540px;
+}

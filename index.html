@@ -17,17 +17,65 @@
 <body>
 
   <header class="site-header">
-    <!-- Titolo dell'app + form di ricerca -->
+
+    <h1 class="fw-bold">SportsHub</h1>
+    <p class="mb-4">Cerca una squadra, scopri prossime partite e ultimi risultati.</p>
+
+    <div class="ricerca d-flex gap-2 mx-auto">
+      <input type="text" id="cerca" class="form-control" placeholder="Cerca una squadra">
+      
+      <button type="button" id="bottone-cerca" class="btn btn-light fw-semibold">Cerca</button>
+    </div>
+
   </header>
 
   <main class="container">
 
     <section id="risultati-section">
-      <!-- Spinner, errore, lista risultati ricerca squadre -->
+
+      <!--spinner-->
+      <div id="spinner" class="text-center my-4" hidden>
+        <div class="spinner-border text-primary"></div>
+      </div>
+
+      <!--ERRORE-->
+      <div id="errore" class="alert alert-danger my-4" hidden></div>
+
+      <!--SEZIONE SQUADRE TROVATE-->
+      <div id="sezione-squadre" class="mt-4" hidden>
+
+        <h2 class="titolo-sezione mb-3">Squadre trovate</h2>
+        <div id="squadre" class="row g-3"> </div>
+
+      </div>
+
     </section>
 
-    <section id="dettagli-section" hidden>
-      <!-- Visibile dopo click su una squadra: prossimi eventi + ultimi risultati -->
+    <section id="dettagli-section" class="scheda-dettagli bg-white mt-4" hidden>
+
+      <!--Nome della squadra-->
+      <h3 id="nome-squadra" class="nome-squadra fw-bold mb-4"> </h3>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6">
+          <h4 class="titolo-lista fw-bold">Prossimi eventi</h4>
+
+          <ul id="prossimi" class="list-unstyled mb-0">
+
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h4 class="titolo-lista fw-bold">Ultimi risultati</h4>
+
+          <ul id="risultati" class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+
+      </div>
+
     </section>
 
   </main>
@@ -35,7 +83,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
     crossorigin="anonymous"></script>
-  <script src="assets/js/script.js"></script>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 
 </html>
